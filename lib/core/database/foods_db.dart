@@ -7,7 +7,7 @@ class FoodsDB {
   //Membuat instance database helper
   DatabaseHelper helper = new DatabaseHelper();
 
-  //Function get all foods
+  //Fungsi mendapatkan makanan
   Future getAll() async {
     Database db = await helper.database;
     

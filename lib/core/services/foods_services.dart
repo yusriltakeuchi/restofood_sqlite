@@ -7,7 +7,7 @@ class FoodsServices {
   //Instance foodDatabase
   static FoodsDB _foodsDB;
 
-  //function get all foods
+  //Fungsi mendapatkan semua makanan
   static Future<List<FoodModel>> getAll() async {
     _foodsDB = new FoodsDB();
 

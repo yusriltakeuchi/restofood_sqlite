@@ -5,7 +5,7 @@ import 'package:sqflite/sqflite.dart';
 class DatabaseHelper {
   //Instance database
   Database _database;
-  //Database name
+  //Nama database
   String _dbName = "restofood.db";
 
   //Membuat getter database
@@ -24,7 +24,7 @@ class DatabaseHelper {
     Directory directory = await getApplicationDocumentsDirectory();
     String path = "${directory.path}/${_dbName}";
 
-    //Open database
+    //Membuka database
     var database = await openDatabase(path, version: 1, onCreate: _createDB);
     return database;
   }
