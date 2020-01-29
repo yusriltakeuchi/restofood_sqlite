@@ -19,4 +19,37 @@ class FoodsServices {
 
     return data;
   }
+
+  static Future<bool> create(FoodModel foodModel) async {
+    _foodsDB = new FoodsDB();
+    
+    var _result = await _foodsDB.create(foodModel);
+    if (_result != null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static Future<bool> update(FoodModel foodModel, String id) async {
+    _foodsDB = new FoodsDB();
+
+    var _result = await _foodsDB.update(foodModel, int.parse(id));
+    if (_result != null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static Future<bool> delete(FoodModel foodModel) async {
+    _foodsDB = new FoodsDB();
+
+    var _result = await _foodsDB.delete(foodModel.id);
+    if (_result != null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

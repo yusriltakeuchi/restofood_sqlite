@@ -9,7 +9,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Restofood",
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.orange,
+        accentColor: Colors.orange
+      ),
       home: HomeScreen(),
+      routes: {
+        "/home": (context) => HomeScreen()
+      },
     );
   }
 }
